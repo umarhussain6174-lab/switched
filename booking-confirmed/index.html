@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Confirmed | SwitcherMate Business</title>
+  <meta name="description" content="Your consultation with SwitcherMate Business is confirmed. We look forward to speaking with you.">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --brand-blue: #2E7DD2;
+      --brand-green: #4CAF50;
+      --neutral-50: #fafafa;
+      --neutral-700: #404040;
+      --neutral-800: #262626;
+      --neutral-900: #171717;
+      --gradient-brand: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%);
+      --font-display: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      --space-4: 1rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-12: 3rem;
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    body {
+      font-family: var(--font-display);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--neutral-800);
+      background: var(--neutral-50);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: var(--space-4);
+    }
+
+    .confirmation-container {
+      max-width: 600px;
+      width: 100%;
+      background: white;
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .confirmation-header {
+      background: var(--gradient-brand);
+      padding: var(--space-12);
+    }
+
+    .checkmark-circle {
+      width: 80px;
+      height: 80px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .checkmark {
+      font-size: 48px;
+      color: var(--brand-green);
+      line-height: 1;
+    }
+
+    .confirmation-content {
+      padding: var(--space-12);
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--neutral-900);
+      margin-bottom: var(--space-6);
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      font-size: 1.125rem;
+      color: var(--neutral-700);
+      line-height: 1.7;
+      margin-bottom: var(--space-8);
+    }
+
+    .btn-home {
+      display: inline-block;
+      background: var(--gradient-brand);
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(46, 125, 210, 0.3);
+    }
+
+    .btn-home:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(46, 125, 210, 0.4);
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 1.75rem;
+      }
+      
+      p {
+        font-size: 1rem;
+      }
+      
+      .confirmation-header {
+        padding: var(--space-8);
+      }
+      
+      .confirmation-content {
+        padding: var(--space-8);
+      }
+      
+      .checkmark-circle {
+        width: 64px;
+        height: 64px;
+      }
+      
+      .checkmark {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="confirmation-container">
+    <div class="confirmation-header">
+      <div class="checkmark-circle">
+        <span class="checkmark">✓</span>
+      </div>
+    </div>
+    
+    <div class="confirmation-content">
+      <h1>Booking confirmed</h1>
+      <p>
+        Thanks for booking your consultation with SwitcherMate Business.<br>
+        A confirmation email has been sent.<br>
+        We look forward to speaking with you.
+      </p>
+      <a href="https://switchermatebusiness.com/" class="btn-home">Back to homepage</a>
+    </div>
+  </div>
+
+</body>
+</html>
