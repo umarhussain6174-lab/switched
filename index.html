@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SwitcherMate Business - Switch Smarter, Save More | UK Business Services</title>
-  <meta name="description" content="Save 20-35% on business energy, broadband, payments & VoIP. WhatsApp-first switching service for UK businesses. Get instant quotes.">
+  <meta name="description" content="Save 20-40% on business energy, broadband, payments & VoIP. WhatsApp-first switching service for UK businesses. Get instant quotes.">
   
   <style>
     /* ============================================
@@ -85,14 +85,14 @@
       }
     }
 
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
     body {
       font-family: var(--font-display);
       font-size: 16px;
       line-height: 1.6;
-      color: var(--neutral-800);
-      background: #ffffff;
+      color: #ffffff;
+      background: #0a0a0a;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
@@ -122,11 +122,11 @@
       top: 50%;
       transform: translateY(-50%);
       z-index: 100;
-      background: var(--gradient-brand);
+      background: #00B67A;
       border: none;
       padding: 1.25rem 0.875rem;
       border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-brand);
+      box-shadow: 0 8px 20px rgba(0, 182, 122, 0.4);
       writing-mode: vertical-rl;
       text-orientation: mixed;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -147,7 +147,7 @@
 
     .trustpilot-widget:hover {
       transform: translateY(-50%) translateX(-6px);
-      box-shadow: 0 8px 20px rgba(46, 125, 210, 0.5);
+      box-shadow: 0 10px 30px rgba(0, 182, 122, 0.6);
     }
 
     .trustpilot-text {
@@ -236,13 +236,255 @@
     }
 
     /* ============================================
+       PREMIUM DARK THEME - COMPREHENSIVE FIX
+       ============================================ */
+    
+    /* Core text colors - READABLE */
+    h1, h2, h3, h4, h5, h6 {
+      color: #ffffff;
+    }
+
+    p {
+      color: #ffffff;
+    }
+
+    li {
+      color: #ffffff;
+    }
+
+    /* Header dark theme */
+    header {
+      background: rgba(15, 15, 15, 0.95) !important;
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .brand-text {
+      /* Keep gradient effect */
+    }
+
+    .menu-item {
+      color: #ffffff;
+    }
+
+    .menu-item:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* All sections - glass morphism */
+    .page-section {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Cards - readable on dark */
+    .solution-card,
+    .how-card,
+    .benefit-card,
+    .guide-card,
+    .faq-item {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .solution-card:hover,
+    .how-card:hover,
+    .benefit-card:hover,
+    .guide-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(46, 125, 210, 0.4);
+    }
+
+    /* Card titles and text */
+    .solution-card h3,
+    .how-card h3,
+    .benefit-card h3,
+    .guide-card h3 {
+      color: #ffffff;
+    }
+
+    .solution-card p,
+    .how-card p,
+    .benefit-card p,
+    .guide-card p {
+      color: #ffffff;
+    }
+
+    /* Hero section */
+    .hero-title {
+      color: #ffffff;
+    }
+
+    .hero-subtitle {
+      color: #ffffff;
+    }
+
+    /* Proof bar */
+    .proof-bar {
+      background: rgba(255, 255, 255, 0.03);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .proof-stat-value {
+      color: #ffffff;
+    }
+
+    .proof-stat-label {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Trust badges */
+    .trust-badge {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+
+    /* FAQ */
+    .faq-question {
+      color: #ffffff;
+    }
+
+    .faq-answer {
+      color: #ffffff;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(10, 10, 10, 0.98);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-grid-item h3 {
+      color: #ffffff;
+    }
+
+    .footer-link {
+      color: #ffffff;
+    }
+
+    .footer-link:hover {
+      color: #4CAF50;
+    }
+
+    .footer-bottom {
+      color: rgba(255, 255, 255, 0.6);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* About page */
+    .about-content {
+      color: #ffffff;
+    }
+
+    .about-content h2,
+    .about-content h3 {
+      color: #ffffff;
+    }
+
+    /* Resources page */
+    .resources-intro {
+      color: #ffffff;
+    }
+
+    /* Guide content */
+    .guide-content-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+
+    .guide-content-box h3,
+    .guide-content-box h4 {
+      color: #ffffff;
+    }
+
+    /* Legal pages */
+    .legal-content {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+
+    .legal-content h2,
+    .legal-content h3 {
+      color: #ffffff;
+    }
+
+    /* Calendar section */
+    .calendar-section {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .calendar-section h2 {
+      color: #ffffff;
+    }
+
+    .calendar-section p {
+      color: #ffffff;
+    }
+
+    /* Forms and inputs */
+    input,
+    textarea,
+    select {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Make sure gradient text stays visible */
+    .brand-text {
+      background: var(--gradient-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Section headings */
+    .section-header {
+      color: #ffffff;
+    }
+
+    .section-subtitle {
+      color: #ffffff;
+    }
+
+    /* CTA sections */
+    .final-cta-section {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .final-cta-section h2 {
+      color: #ffffff;
+    }
+
+    .final-cta-section p {
+      color: #ffffff;
+    }
+
+    /* ============================================
+       END PREMIUM DARK THEME
+       ============================================ */
+
+    /* ============================================
        HEADER
        ============================================ */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255, 255, 255, 0.95);
+      /* Dark header set above in premium theme section */
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--neutral-200);
@@ -406,7 +648,7 @@
     .menu-item {
       display: block;
       padding: var(--space-4) 0;
-      color: rgba(255, 255, 255, 0.9);
+      color: #ffffff;
       text-decoration: none;
       font-size: 0.9375rem;
       font-weight: 500;
@@ -474,7 +716,7 @@
        ============================================ */
     .hero {
       padding: var(--space-12) var(--space-4) var(--space-16);
-      background: linear-gradient(135deg, #E3F2FD 0%, #E8F5E9 100%);
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
       position: relative;
       overflow: hidden;
     }
@@ -544,14 +786,14 @@
       font-size: clamp(2rem, 5vw, 3.5rem);
       font-weight: 800;
       line-height: 1.1;
-      color: var(--neutral-900);
+      color: #ffffff;
       margin-bottom: var(--space-6);
       letter-spacing: -0.02em;
     }
 
     .hero-subtitle {
       font-size: clamp(1.125rem, 3vw, 1.375rem);
-      color: var(--neutral-700);
+      color: #ffffff;
       margin-bottom: var(--space-8);
       line-height: 1.5;
     }
@@ -625,8 +867,8 @@
     }
 
     .btn-secondary {
-      background: white;
-      color: var(--neutral-800);
+      background: rgba(255, 255, 255, 0.04);
+      color: #ffffff;
       border: 2px solid var(--neutral-300);
     }
 
@@ -693,7 +935,7 @@
        ============================================ */
     .trust-section {
       padding: var(--space-12) var(--space-4);
-      background: white;
+      background: rgba(255, 255, 255, 0.04);
       text-align: center;
     }
 
@@ -711,7 +953,7 @@
     .trust-primary {
       font-size: 1.125rem;
       line-height: 1.7;
-      color: var(--neutral-800);
+      color: #ffffff;
       margin-bottom: var(--space-6);
       font-weight: 400;
       letter-spacing: -0.01em;
@@ -720,7 +962,7 @@
     .trust-secondary {
       font-size: 1rem;
       line-height: 1.7;
-      color: var(--neutral-700);
+      color: #ffffff;
       font-weight: 300;
     }
 
@@ -729,7 +971,7 @@
        ============================================ */
     .solutions-section {
       padding: var(--space-16) var(--space-4);
-      background: white;
+      background: rgba(255, 255, 255, 0.04);
     }
 
     @media (min-width: 768px) {
@@ -747,14 +989,14 @@
     .section-title {
       font-size: clamp(1.875rem, 4vw, 2.5rem);
       font-weight: 800;
-      color: var(--neutral-900);
+      color: #ffffff;
       margin-bottom: var(--space-4);
       letter-spacing: -0.02em;
     }
 
     .section-subtitle {
       font-size: 1.125rem;
-      color: var(--neutral-700);
+      color: #ffffff;
     }
 
     .solutions-grid {
@@ -778,12 +1020,13 @@
     }
 
     .solution-card {
-      background: white;
-      border: 2px solid var(--neutral-200);
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px solid rgba(255, 255, 255, 0.15);
       border-radius: var(--radius-xl);
       padding: var(--space-6);
       transition: all 0.3s ease;
       cursor: pointer;
+      backdrop-filter: blur(10px);
     }
 
     @media (min-width: 768px) {
@@ -794,7 +1037,8 @@
 
     .solution-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.08);
     }
 
     .solution-card:nth-child(1):hover {
@@ -884,12 +1128,12 @@
     .solution-title {
       font-size: 1.25rem;
       font-weight: 700;
-      color: var(--neutral-900);
+      color: #ffffff;
       margin-bottom: var(--space-2);
     }
 
     .solution-desc {
-      color: var(--neutral-700);
+      color: #ffffff;
       margin-bottom: var(--space-6);
       font-size: 0.9375rem;
     }
@@ -914,7 +1158,7 @@
        ============================================ */
     .how-it-works {
       padding: var(--space-16) var(--space-4);
-      background: var(--neutral-50);
+      background: rgba(255, 255, 255, 0.03);
     }
 
     @media (min-width: 768px) {
@@ -970,12 +1214,12 @@
     .step-title {
       font-size: 1.125rem;
       font-weight: 700;
-      color: var(--neutral-900);
+      color: #ffffff;
       margin-bottom: var(--space-2);
     }
 
     .step-desc {
-      color: var(--neutral-700);
+      color: #ffffff;
       font-size: 0.9375rem;
     }
 
@@ -984,7 +1228,7 @@
        ============================================ */
     .benefits-section {
       padding: var(--space-16) var(--space-4);
-      background: white;
+      background: rgba(255, 255, 255, 0.04);
     }
 
     @media (min-width: 768px) {
@@ -1055,12 +1299,12 @@
 
     .benefit-title {
       font-weight: 700;
-      color: var(--neutral-900);
+      color: #ffffff;
       margin-bottom: var(--space-1);
     }
 
     .benefit-desc {
-      color: var(--neutral-700);
+      color: #ffffff;
       font-size: 0.9375rem;
     }
 
@@ -1069,7 +1313,7 @@
        ============================================ */
     .faq-section {
       padding: var(--space-16) var(--space-4);
-      background: var(--neutral-50);
+      background: rgba(255, 255, 255, 0.03);
     }
 
     @media (min-width: 768px) {
@@ -1084,7 +1328,7 @@
     }
 
     .faq-item {
-      background: white;
+      background: rgba(255, 255, 255, 0.04);
       border-radius: var(--radius-lg);
       margin-bottom: var(--space-4);
       box-shadow: var(--shadow-sm);
@@ -1128,7 +1372,7 @@
       padding: 0 var(--space-4);
       opacity: 0;
       transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
-      color: var(--neutral-600);
+      color: rgba(255, 255, 255, 0.7);
       line-height: 1.7;
     }
 
@@ -1176,13 +1420,13 @@
 
     .faq-question {
       font-weight: 700;
-      color: var(--neutral-900);
+      color: #ffffff;
       margin-bottom: var(--space-2);
       font-size: 1.0625rem;
     }
 
     .faq-answer {
-      color: var(--neutral-700);
+      color: #ffffff;
       font-size: 0.9375rem;
       line-height: 1.6;
     }
@@ -1239,7 +1483,7 @@
     }
 
     .btn-white {
-      background: white;
+      background: rgba(255, 255, 255, 0.04);
       color: var(--primary);
       position: relative;
       z-index: 1;
@@ -1247,7 +1491,7 @@
     }
 
     .btn-white:hover {
-      background: white;
+      background: rgba(255, 255, 255, 0.04);
       transform: translateY(-3px) scale(1.02);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     }
@@ -1298,21 +1542,24 @@
 
     .footer-links a,
     .footer-links button {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(255, 255, 255, 0.85);
       text-decoration: none;
       font-size: 0.9375rem;
-      transition: color 0.2s ease;
+      transition: all 0.2s ease;
       background: none;
       border: none;
       padding: 0;
       cursor: pointer;
       text-align: left;
       font-family: inherit;
+      display: inline-block;
+      border-bottom: 1px solid transparent;
     }
 
     .footer-links a:hover,
     .footer-links button:hover {
-      color: white;
+      color: #25D366;
+      border-bottom: 1px solid #25D366;
     }
 
     .footer-col a[href^="mailto:"]:hover,
@@ -1366,7 +1613,7 @@
     .content-page h1 {
       font-size: 1.75rem;
       font-weight: 700;
-      color: var(--neutral-900);
+      color: #ffffff;
       margin-bottom: var(--space-4);
       letter-spacing: -0.01em;
     }
@@ -1374,7 +1621,7 @@
     .content-page h2 {
       font-size: 1.0625rem;
       font-weight: 700;
-      color: var(--neutral-900);
+      color: #ffffff;
       margin-top: var(--space-6);
       margin-bottom: var(--space-3);
     }
@@ -1382,13 +1629,13 @@
     .content-page h3 {
       font-size: 0.9375rem;
       font-weight: 600;
-      color: var(--neutral-900);
+      color: #ffffff;
       margin-top: var(--space-4);
       margin-bottom: var(--space-2);
     }
 
     .content-page p {
-      color: var(--neutral-700);
+      color: #ffffff;
       margin-bottom: var(--space-3);
       line-height: 1.6;
       font-size: 0.875rem;
@@ -1401,7 +1648,7 @@
     }
 
     .content-page li {
-      color: var(--neutral-700);
+      color: #ffffff;
       margin-bottom: var(--space-2);
       line-height: 1.6;
     }
@@ -1426,7 +1673,7 @@
     }
 
     .resource-card {
-      background: white;
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid var(--neutral-200);
       border-radius: var(--radius-lg);
       padding: var(--space-6);
@@ -1442,13 +1689,13 @@
 
     .resource-title {
       font-weight: 700;
-      color: var(--neutral-900);
+      color: #ffffff;
       margin-bottom: var(--space-2);
       font-size: 1.0625rem;
     }
 
     .resource-excerpt {
-      color: var(--neutral-700);
+      color: #ffffff;
       font-size: 0.9375rem;
       margin-bottom: var(--space-4);
     }
@@ -1467,16 +1714,445 @@
     .resource-link:hover {
       gap: var(--space-3);
     }
+
+    /* ============================================
+       PREMIUM DARK THEME TRANSFORMATION
+       ============================================ */
+    
+    /* Animated Background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(46,125,210,0.15) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: moveGrid 20s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes moveGrid {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50px, 50px); }
+    }
+
+    /* Floating Orbs */
+    #page-wrap::before,
+    #page-wrap::after,
+    body > div:first-of-type::before {
+      content: '';
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.3;
+      animation: float 20s infinite ease-in-out;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    #page-wrap::before {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, #2E7DD2, transparent);
+      top: 10%;
+      left: 20%;
+      animation-delay: 0s;
+    }
+
+    #page-wrap::after {
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, #4CAF50, transparent);
+      top: 60%;
+      right: 20%;
+      animation-delay: 5s;
+    }
+
+    body > div:first-of-type::before {
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, #38B2AC, transparent);
+      bottom: 10%;
+      left: 40%;
+      animation-delay: 10s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(50px, -50px) scale(1.1); }
+      50% { transform: translate(-30px, 40px) scale(0.9); }
+      75% { transform: translate(40px, 30px) scale(1.05); }
+    }
+
+    /* Glass-morphism for all sections */
+    .page-section,
+    .solutions-grid,
+    .solution-card,
+    .how-card,
+    .benefit-card,
+    .faq-item,
+    .guide-card,
+    .guide-content-box {
+      background: rgba(255, 255, 255, 0.03) !important;
+      backdrop-filter: blur(20px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* Header Dark Theme */
+    header {
+      background: rgba(10, 10, 10, 0.8) !important;
+      backdrop-filter: blur(20px) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .brand-text {
+      color: white !important;
+    }
+
+    /* Menu Items */
+    .menu-item {
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    .menu-item:hover {
+      color: white !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+    }
+
+    /* All headings white */
+    h1, h2, h3, h4, h5, h6 {
+      color: white !important;
+    }
+
+    /* Specific text elements that need light color */
+    .page-section p,
+    .solution-card p,
+    .how-card p,
+    .benefit-card p,
+    .faq-item p,
+    .guide-card p,
+    footer p,
+    .about-content p {
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    /* Body text should be light */
+    body {
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    /* List items */
+    li {
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    /* Make sure all content text is visible */
+    .hero-subtitle,
+    .proof-stat-value,
+    .proof-stat-label,
+    .solution-card h3,
+    .how-card h3,
+    .benefit-card h3,
+    .guide-card h3,
+    .faq-question {
+      color: white !important;
+    }
+
+    /* Link colors */
+    a:not(.menu-item):not(.footer-link) {
+      color: var(--brand-blue) !important;
+    }
+
+    /* Solution cards premium hover */
+    .solution-card:hover {
+      transform: translateY(-10px) !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      border-color: rgba(46, 125, 210, 0.5) !important;
+      box-shadow: 0 20px 60px rgba(46, 125, 210, 0.3) !important;
+    }
+
+    /* How cards premium hover */
+    .how-card:hover {
+      transform: translateY(-10px) !important;
+      border-color: rgba(76, 175, 80, 0.5) !important;
+      box-shadow: 0 20px 60px rgba(76, 175, 80, 0.3) !important;
+    }
+
+    /* Benefit cards premium hover */
+    .benefit-card:hover {
+      transform: translateY(-10px) scale(1.02) !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      box-shadow: 0 20px 60px rgba(46, 125, 210, 0.3) !important;
+    }
+
+    /* FAQ items */
+    .faq-item {
+      background: rgba(255, 255, 255, 0.03) !important;
+    }
+
+    .faq-item:hover {
+      background: rgba(255, 255, 255, 0.05) !important;
+    }
+
+    /* Trust badges */
+    .trust-badge {
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    /* Proof bar dark */
+    .proof-bar {
+      background: rgba(255, 255, 255, 0.02) !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Footer dark */
+    footer {
+      background: rgba(10, 10, 10, 0.95) !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .footer-grid-item h3 {
+      color: white !important;
+    }
+
+    .footer-link {
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+
+    .footer-link:hover {
+      color: var(--brand-green) !important;
+    }
+
+    .footer-bottom {
+      color: rgba(255, 255, 255, 0.5) !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Calendar section */
+    .calendar-section {
+      background: rgba(255, 255, 255, 0.02) !important;
+    }
+
+    /* Guide cards */
+    .guide-card:hover {
+      transform: translateY(-5px) !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      box-shadow: 0 15px 40px rgba(46, 125, 210, 0.3) !important;
+    }
+
+    /* Privacy and Terms pages */
+    .legal-content {
+      background: rgba(255, 255, 255, 0.03) !important;
+      backdrop-filter: blur(20px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    /* About page */
+    .about-content {
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    /* Make all white backgrounds transparent/dark */
+    [style*="background: white"],
+    [style*="background: #fff"],
+    [style*="background: #ffffff"],
+    [style*="background-color: white"] {
+      background: rgba(255, 255, 255, 0.03) !important;
+    }
+
+    /* Ensure icons stay visible */
+    svg path {
+      fill: currentColor;
+    }
+
+    /* Input fields dark theme */
+    input, textarea, select {
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      color: white !important;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(255, 255, 255, 0.4) !important;
+    }
+
+    /* Make sure gradient text stays vibrant */
+    .brand-text,
+    [style*="-webkit-background-clip: text"] {
+      -webkit-text-fill-color: transparent !important;
+    }
+
+    /* Final CTA section premium */
+    .final-cta-section {
+      background: rgba(255, 255, 255, 0.02) !important;
+      backdrop-filter: blur(20px) !important;
+    }
+
+    /* Floating WhatsApp - WhatsApp Green */
+    .floating-whatsapp {
+      background: #25D366 !important;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4) !important;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1) translateY(-5px) !important;
+      box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6) !important;
+    }
+
+    /* Trustpilot widget - Trustpilot Green */
+    .trustpilot-widget {
+      background: #00B67A !important;
+      backdrop-filter: blur(20px) !important;
+      border: none !important;
+      box-shadow: 0 8px 20px rgba(0, 182, 122, 0.4) !important;
+    }
+
+    .trustpilot-widget:hover {
+      box-shadow: 0 10px 30px rgba(0, 182, 122, 0.6) !important;
+    }
+
+    /* ============================================
+       END PREMIUM DARK THEME
+       ============================================ */
+
+    /* ============================================
+       NUCLEAR READABILITY FIX
+       ============================================ */
+    
+    * {
+      color: #ffffff !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #ffffff !important;
+    }
+
+    p {
+      color: #ffffff !important;
+    }
+
+    li {
+      color: #ffffff !important;
+    }
+
+    span {
+      color: #ffffff !important;
+    }
+
+    div {
+      color: #ffffff !important;
+    }
+
+    /* Hero section - ULTRA specific */
+    .hero,
+    .hero *,
+    .hero-title,
+    .hero-subtitle,
+    .hero-content,
+    .hero-content * {
+      color: #ffffff !important;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%) !important;
+    }
+
+    a {
+      color: #4CAF50 !important;
+    }
+
+    header {
+      background: #000000 !important;
+    }
+
+    body {
+      background: #000000 !important;
+    }
+
+    .brand-text {
+      background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+
+    footer {
+      background: #000000 !important;
+    }
+
+    /* Back to Guides buttons - dark with hover */
+    button[onclick^="hideGuide"] {
+      background: #1a1a1a !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+
+    button[onclick^="hideGuide"]:hover {
+      background: #2a2a2a !important;
+      border-color: #25D366 !important;
+      transform: translateX(-3px);
+    }
+
+    /* Solution cards - more prominent gray background */
+    .solution-card {
+      background: rgba(255, 255, 255, 0.08) !important;
+      border: 2px solid rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .solution-card:hover {
+      background: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    /* ============================================
+       OFF-CANVAS MENU - MOBILE FIRST
+       ============================================ */
+    
+    /* Mobile (default) - Simple overlay, no push */
+    #page-wrap {
+      position: relative;
+      transition: none;
+    }
+
+    body.menu-open #page-wrap {
+      transform: none;
+    }
+
+    /* Desktop only (> 768px) - Off-canvas push effect */
+    @media (min-width: 769px) {
+      #page-wrap {
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
+      }
+
+      body.menu-open #page-wrap {
+        transform: translateX(-380px);
+      }
+    }
+
   </style>
 </head>
 <body>
   <!-- Menu Backdrop -->
   <div class="menu-backdrop" id="menuBackdrop"></div>
-
-  <!-- Trustpilot Widget (Fixed Right Edge) -->
-  <a href="https://uk.trustpilot.com/review/switchermatebusiness.com" target="_blank" rel="noopener noreferrer" class="trustpilot-widget">
-    <span class="trustpilot-text">★ Trustpilot</span>
-  </a>
 
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20free%20cost%20review." class="floating-whatsapp" aria-label="Message us on WhatsApp">
@@ -1502,7 +2178,7 @@
       <!-- Hero -->
       <section class="hero">
         <div class="hero-content">
-          <h1 class="hero-title">Cut Business Energy, Card Processing & Connectivity Costs</h1>
+          <h1 class="hero-title">Cut Business Energy, Card Machine & Connectivity Costs</h1>
           <p class="hero-subtitle">
             Independent UK contract benchmarking and supplier renegotiation for growth-focused businesses.
           </p>
@@ -1543,12 +2219,12 @@
             </a>
           </div>
 
-          <!-- Card Payments -->
+          <!-- Card Machines -->
           <div class="solution-card">
             <div class="solution-icon">💳</div>
-            <h3 class="solution-title">Card Payments</h3>
+            <h3 class="solution-title">Card Machines</h3>
             <p class="solution-desc">Merchant fee benchmarking, terminal solutions and commercial rate optimisation.</p>
-            <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Card%20Payments." class="solution-btn">
+            <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Card%20Machines." class="solution-btn">
               Get a quote →
             </a>
           </div>
@@ -1703,25 +2379,30 @@
         </div>
       </section>
 
-      <!-- Final CTA with Animation -->
-      <section style="padding: 5rem 1.25rem; background: linear-gradient(135deg, #1a5fb4 0%, #2E7DD2 50%, #4CAF50 100%); position: relative; overflow: hidden;">
-        <!-- Animated background elements -->
-        <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px; animation: backgroundPulse 20s linear infinite;"></div>
+      <!-- Final CTA with Premium Dark Theme -->
+      <section style="padding: 6rem 1.25rem; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); position: relative; overflow: hidden;">
+        <!-- Floating orbs -->
+        <div style="position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(46,125,210,0.3), transparent); border-radius: 50%; top: -100px; right: -100px; filter: blur(60px); animation: floatOrb1 20s infinite ease-in-out;"></div>
+        <div style="position: absolute; width: 350px; height: 350px; background: radial-gradient(circle, rgba(76,175,80,0.3), transparent); border-radius: 50%; bottom: -100px; left: -100px; filter: blur(60px); animation: floatOrb2 15s infinite ease-in-out;"></div>
         
-        <div style="position: relative; z-index: 1; max-width: 800px; margin: 0 auto; text-align: center;">
-          <h2 style="font-size: 2.5rem; font-weight: 800; color: white; margin-bottom: 1rem; line-height: 1.2; animation: fadeSlideUp 0.8s ease-out;">Ready to Cut Your Business Costs?</h2>
-          <p style="font-size: 1.25rem; color: rgba(255,255,255,0.95); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; animation: fadeSlideUp 0.8s ease-out 0.2s backwards;">Message us. Share your bills. Get quotes.</p>
+        <!-- Animated grid background -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 50px 50px; animation: backgroundPulse 20s linear infinite;"></div>
+        
+        <!-- Glass container -->
+        <div style="position: relative; z-index: 1; max-width: 900px; margin: 0 auto; text-align: center; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; padding: 4rem 2rem; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);">
+          <h2 style="font-size: 3rem; font-weight: 900; color: white; margin-bottom: 1rem; line-height: 1.2; letter-spacing: -1px; animation: fadeSlideUp 0.8s ease-out;">Ready to <span style="background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Cut Your Business Costs?</span></h2>
+          <p style="font-size: 1.25rem; color: rgba(255,255,255,0.85); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; animation: fadeSlideUp 0.8s ease-out 0.2s backwards;">Message us. Share your bills. Get quotes. Start saving instantly.</p>
           
-          <!-- Animated buttons -->
-          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeSlideUp 0.8s ease-out 0.4s backwards;">
-            <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20free%20cost%20review." style="display: inline-flex; align-items: center; gap: 0.75rem; background: white; color: #2E7DD2; padding: 1.25rem 2.5rem; border-radius: 50px; text-decoration: none; font-size: 1.125rem; font-weight: 700; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: all 0.3s; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.3)'">
-              <svg style="animation: whatsappBounce 2s ease-in-out infinite;" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <!-- Premium buttons -->
+          <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; animation: fadeSlideUp 0.8s ease-out 0.4s backwards;">
+            <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20free%20cost%20review." style="display: inline-flex; align-items: center; gap: 0.75rem; background: #25D366; color: white; padding: 1.5rem 3rem; border-radius: 100px; text-decoration: none; font-size: 1.125rem; font-weight: 800; box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 15px 50px rgba(37, 211, 102, 0.6)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 40px rgba(37, 211, 102, 0.4)'">
+              <svg style="animation: whatsappBounce 2s ease-in-out infinite;" width="24" height="24" viewBox="0 0 24 24" fill="white">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
               </svg>
-              <span style="position: relative; z-index: 1;">Start on WhatsApp</span>
+              <span>Start on WhatsApp</span>
             </a>
             
-            <a href="tel:08009124173" style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; padding: 1.25rem 2.5rem; border-radius: 50px; text-decoration: none; font-size: 1.125rem; font-weight: 700; border: 2px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'; this.style.transform='translateY(-5px)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'; this.style.transform='translateY(0)'">
+            <a href="tel:08009124173" style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); color: white; padding: 1.5rem 3rem; border-radius: 100px; text-decoration: none; font-size: 1.125rem; font-weight: 700; border: 2px solid rgba(255,255,255,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(255,255,255,0.4)'; this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 50px rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.2)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.3)'">
               <span style="display: inline-block; animation: phoneBounce 2s ease-in-out infinite; font-size: 1.5rem;">📞</span>
               <span>0800 912 4173</span>
             </a>
@@ -1730,6 +2411,18 @@
       </section>
 
       <style>
+        @keyframes floatOrb1 {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          25% { transform: translate(50px, -50px) scale(1.1); }
+          50% { transform: translate(-30px, 40px) scale(0.9); }
+          75% { transform: translate(40px, 30px) scale(1.05); }
+        }
+
+        @keyframes floatOrb2 {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(-40px, 50px) scale(1.1); }
+          66% { transform: translate(30px, -30px) scale(0.95); }
+        }
         @keyframes fadeSlideUp {
           from {
             opacity: 0;
@@ -1774,7 +2467,7 @@
         <p style="margin-top: 1.5rem;"><strong>Four services:</strong></p>
         <ul style="margin-bottom: 2rem; line-height: 1.8;">
           <li>Business Energy — Gas, electricity, onsite generation</li>
-          <li>Card Payments — Merchant fees, terminals, rate optimization</li>
+          <li>Card Machines — Merchant fees, terminals, rate optimization</li>
           <li>Broadband & VoIP — Full-fibre, 5G, cloud telephony</li>
           <li>Business Mobile — SIM-only, handsets, fleet management</li>
         </ul>
@@ -1804,7 +2497,7 @@
         <div class="resources-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
           
           <!-- Guide 1: Business Energy -->
-          <div class="resource-card" style="background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('energyGuide')">
+          <div class="resource-card" style="background: rgba(255, 255, 255, 0.04); border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('energyGuide')">
             <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">⚡</div>
             <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #171717;">Business Energy Contract Strategy</h3>
             <p style="color: #737373; line-height: 1.6; margin-bottom: 1rem;">How UK businesses benchmark tariffs, avoid auto-renewal penalties and negotiate fixed-rate contracts in volatile markets.</p>
@@ -1812,7 +2505,7 @@
           </div>
 
           <!-- Guide 2: Merchant Fees -->
-          <div class="resource-card" style="background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('merchantGuide')">
+          <div class="resource-card" style="background: rgba(255, 255, 255, 0.04); border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('merchantGuide')">
             <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">💳</div>
             <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #171717;">Merchant Service Fee Benchmarking</h3>
             <p style="color: #737373; line-height: 1.6; margin-bottom: 1rem;">Industry fee structures, interchange rates and terminal cost analysis. Why most businesses overpay and how to renegotiate.</p>
@@ -1820,7 +2513,7 @@
           </div>
 
           <!-- Guide 3: Connectivity -->
-          <div class="resource-card" style="background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('connectivityGuide')">
+          <div class="resource-card" style="background: rgba(255, 255, 255, 0.04); border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('connectivityGuide')">
             <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">📡</div>
             <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #171717;">Business Connectivity Contract Review</h3>
             <p style="color: #737373; line-height: 1.6; margin-bottom: 1rem;">Broadband, VoIP and mobile contract analysis. Speed vs cost optimization and multi-service bundling strategies.</p>
@@ -1828,7 +2521,7 @@
           </div>
 
           <!-- Guide 4: Fixed vs Variable Energy -->
-          <div class="resource-card" style="background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('fixedVariableGuide')">
+          <div class="resource-card" style="background: rgba(255, 255, 255, 0.04); border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('fixedVariableGuide')">
             <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">📊</div>
             <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #171717;">Fixed vs Variable Energy Contracts</h3>
             <p style="color: #737373; line-height: 1.6; margin-bottom: 1rem;">Market timing strategy, wholesale price tracking and risk management. When to lock in rates vs ride market fluctuations.</p>
@@ -1836,7 +2529,7 @@
           </div>
 
           <!-- Guide 5: Payment Gateway Comparison -->
-          <div class="resource-card" style="background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('paymentGatewayGuide')">
+          <div class="resource-card" style="background: rgba(255, 255, 255, 0.04); border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('paymentGatewayGuide')">
             <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">🌐</div>
             <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #171717;">E-commerce Payment Gateway Analysis</h3>
             <p style="color: #737373; line-height: 1.6; margin-bottom: 1rem;">Stripe vs Worldpay vs Square comparison. Integration costs, international fees and payment method coverage for UK online businesses.</p>
@@ -1844,7 +2537,7 @@
           </div>
 
           <!-- Guide 6: Leased Lines -->
-          <div class="resource-card" style="background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('leasedLineGuide')">
+          <div class="resource-card" style="background: rgba(255, 255, 255, 0.04); border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('leasedLineGuide')">
             <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">🔌</div>
             <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #171717;">Leased Line vs Business Broadband</h3>
             <p style="color: #737373; line-height: 1.6; margin-bottom: 1rem;">When dedicated symmetric bandwidth justifies cost. SLA guarantees, uptime requirements and ROI analysis for mission-critical connectivity.</p>
@@ -1852,7 +2545,7 @@
           </div>
 
           <!-- Guide 7: Multi-Site Energy -->
-          <div class="resource-card" style="background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('multiSiteGuide')">
+          <div class="resource-card" style="background: rgba(255, 255, 255, 0.04); border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('multiSiteGuide')">
             <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">🏢</div>
             <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #171717;">Multi-Site Energy Procurement</h3>
             <p style="color: #737373; line-height: 1.6; margin-bottom: 1rem;">Portfolio aggregation tactics, volume-based negotiation leverage and centralized contract management for businesses with multiple locations.</p>
@@ -1860,7 +2553,7 @@
           </div>
 
           <!-- Guide 8: Contract Negotiation -->
-          <div class="resource-card" style="background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('negotiationGuide')">
+          <div class="resource-card" style="background: rgba(255, 255, 255, 0.04); border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('negotiationGuide')">
             <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">🤝</div>
             <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #171717;">Supplier Contract Negotiation Framework</h3>
             <p style="color: #737373; line-height: 1.6; margin-bottom: 1rem;">Commercial leverage tactics, timing strategy and volume commitment analysis across energy, payment and connectivity contracts.</p>
@@ -1868,7 +2561,7 @@
           </div>
 
           <!-- Guide 9: Business Mobile -->
-          <div class="resource-card" style="background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('businessMobileGuide')">
+          <div class="resource-card" style="background: rgba(255, 255, 255, 0.04); border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('businessMobileGuide')">
             <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">📱</div>
             <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #171717;">Business Mobile Contract Strategy</h3>
             <p style="color: #737373; line-height: 1.6; margin-bottom: 1rem;">SIM-only vs handset contracts, fleet management and data pooling strategies. Cost optimization for business mobile connectivity.</p>
@@ -1876,7 +2569,7 @@
           </div>
 
           <!-- Guide 10: BT Copper Switch-off -->
-          <div class="resource-card" style="background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('copperSwitchoffGuide')">
+          <div class="resource-card" style="background: rgba(255, 255, 255, 0.04); border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('copperSwitchoffGuide')">
             <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">⚠️</div>
             <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #171717;">BT Copper Network Switch-off 2027</h3>
             <p style="color: #737373; line-height: 1.6; margin-bottom: 1rem;">Complete guide to the PSTN/ISDN shutdown. Migration planning, VoIP alternatives and what UK businesses need to do before the deadline.</p>
@@ -1884,7 +2577,7 @@
           </div>
 
           <!-- Guide 11: Contract Exit Strategies -->
-          <div class="resource-card" style="background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('contractExitGuide')">
+          <div class="resource-card" style="background: rgba(255, 255, 255, 0.04); border: 1px solid #e5e5e5; border-radius: 12px; padding: 2rem; cursor: pointer; transition: all 0.2s;" onclick="showGuide('contractExitGuide')">
             <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">🚪</div>
             <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #171717;">Contract Exit Strategies</h3>
             <p style="color: #737373; line-height: 1.6; margin-bottom: 1rem;">Legal pathways for terminating supplier contracts early. Early termination clauses, breach conditions and cost-benefit analysis frameworks.</p>
@@ -1897,7 +2590,7 @@
         
         <!-- Energy Guide -->
         <div id="energyGuide" style="display: none; max-width: 900px; margin: 0 auto;">
-          <button onclick="hideGuide('energyGuide')" style="background: #f5f5f5; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600;">← Back to guides</button>
+          <button onclick="hideGuide('energyGuide')" style="background: #1a1a1a; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600; transition: all 0.3s;">← Back to guides</button>
           
           <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">Business Energy Contract Strategy</h1>
           <p style="font-size: 1.125rem; color: #737373; margin-bottom: 3rem;">Independent contract analysis and tariff benchmarking for UK commercial energy buyers.</p>
@@ -1940,7 +2633,7 @@
 
         <!-- Merchant Guide -->
         <div id="merchantGuide" style="display: none; max-width: 900px; margin: 0 auto;">
-          <button onclick="hideGuide('merchantGuide')" style="background: #f5f5f5; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600;">← Back to guides</button>
+          <button onclick="hideGuide('merchantGuide')" style="background: #1a1a1a; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600; transition: all 0.3s;">← Back to guides</button>
           
           <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">Merchant Service Fee Benchmarking</h1>
           <p style="font-size: 1.125rem; color: #737373; margin-bottom: 3rem;">Independent card payment processing analysis for UK businesses.</p>
@@ -1987,13 +2680,13 @@
           <div style="background: #f0f9ff; border-left: 4px solid #2E7DD2; padding: 1.5rem; margin: 3rem 0; border-radius: 8px;">
             <h3 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 0.75rem; color: #171717;">Need Fee Analysis?</h3>
             <p style="color: #404040; margin-bottom: 1rem;">We benchmark card processing fees against industry averages and provide renegotiation support. Share your merchant statement via WhatsApp.</p>
-            <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Card%20Payments." style="display: inline-block; background: #2E7DD2; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">Get a quote →</a>
+            <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Card%20Machines." style="display: inline-block; background: #2E7DD2; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">Get a quote →</a>
           </div>
         </div>
 
         <!-- Connectivity Guide -->
         <div id="connectivityGuide" style="display: none; max-width: 900px; margin: 0 auto;">
-          <button onclick="hideGuide('connectivityGuide')" style="background: #f5f5f5; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600;">← Back to guides</button>
+          <button onclick="hideGuide('connectivityGuide')" style="background: #1a1a1a; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600; transition: all 0.3s;">← Back to guides</button>
           
           <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">Business Connectivity Contract Review</h1>
           <p style="font-size: 1.125rem; color: #737373; margin-bottom: 3rem;">Independent broadband, VoIP and mobile contract analysis for UK businesses.</p>
@@ -2042,7 +2735,7 @@
 
         <!-- Guide 4: Fixed vs Variable Energy -->
         <div id="fixedVariableGuide" style="display: none; max-width: 900px; margin: 0 auto;">
-          <button onclick="hideGuide('fixedVariableGuide')" style="background: #f5f5f5; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600;">← Back to guides</button>
+          <button onclick="hideGuide('fixedVariableGuide')" style="background: #1a1a1a; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600; transition: all 0.3s;">← Back to guides</button>
           
           <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">Fixed vs Variable Energy Contracts</h1>
           <p style="font-size: 1.125rem; color: #737373; margin-bottom: 3rem;">Market timing strategy and risk management for commercial energy procurement.</p>
@@ -2091,7 +2784,7 @@
 
         <!-- Guide 5: Payment Gateway -->
         <div id="paymentGatewayGuide" style="display: none; max-width: 900px; margin: 0 auto;">
-          <button onclick="hideGuide('paymentGatewayGuide')" style="background: #f5f5f5; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600;">← Back to guides</button>
+          <button onclick="hideGuide('paymentGatewayGuide')" style="background: #1a1a1a; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600; transition: all 0.3s;">← Back to guides</button>
           
           <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">E-commerce Payment Gateway Analysis</h1>
           <p style="font-size: 1.125rem; color: #737373; margin-bottom: 3rem;">Comprehensive comparison for UK online businesses.</p>
@@ -2134,13 +2827,13 @@
           <div style="background: #f0f9ff; border-left: 4px solid #2E7DD2; padding: 1.5rem; margin: 3rem 0; border-radius: 8px;">
             <h3 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 0.75rem; color: #171717;">Need Payment Gateway Comparison?</h3>
             <p style="color: #404040; margin-bottom: 1rem;">We analyze transaction volumes, customer geography and technical requirements to recommend optimal payment gateway. Share your requirements via WhatsApp.</p>
-            <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Card%20Payments." style="display: inline-block; background: #2E7DD2; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">Get a quote →</a>
+            <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20Card%20Machines." style="display: inline-block; background: #2E7DD2; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">Get a quote →</a>
           </div>
         </div>
 
         <!-- Guide 6: Leased Lines -->
         <div id="leasedLineGuide" style="display: none; max-width: 900px; margin: 0 auto;">
-          <button onclick="hideGuide('leasedLineGuide')" style="background: #f5f5f5; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600;">← Back to guides</button>
+          <button onclick="hideGuide('leasedLineGuide')" style="background: #1a1a1a; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600; transition: all 0.3s;">← Back to guides</button>
           
           <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">Leased Line vs Business Broadband</h1>
           <p style="font-size: 1.125rem; color: #737373; margin-bottom: 3rem;">When dedicated symmetric bandwidth justifies premium cost.</p>
@@ -2184,7 +2877,7 @@
 
         <!-- Guide 7: Multi-Site Energy -->
         <div id="multiSiteGuide" style="display: none; max-width: 900px; margin: 0 auto;">
-          <button onclick="hideGuide('multiSiteGuide')" style="background: #f5f5f5; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600;">← Back to guides</button>
+          <button onclick="hideGuide('multiSiteGuide')" style="background: #1a1a1a; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600; transition: all 0.3s;">← Back to guides</button>
           
           <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">Multi-Site Energy Procurement</h1>
           <p style="font-size: 1.125rem; color: #737373; margin-bottom: 3rem;">Portfolio aggregation and centralized contract management for businesses with multiple locations.</p>
@@ -2228,7 +2921,7 @@
 
         <!-- Guide 8: Negotiation Framework -->
         <div id="negotiationGuide" style="display: none; max-width: 900px; margin: 0 auto;">
-          <button onclick="hideGuide('negotiationGuide')" style="background: #f5f5f5; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600;">← Back to guides</button>
+          <button onclick="hideGuide('negotiationGuide')" style="background: #1a1a1a; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600; transition: all 0.3s;">← Back to guides</button>
           
           <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">Supplier Contract Negotiation Framework</h1>
           <p style="font-size: 1.125rem; color: #737373; margin-bottom: 3rem;">Commercial leverage tactics across energy, payment and connectivity contracts.</p>
@@ -2284,7 +2977,7 @@
 
         <!-- Guide 9: Business Mobile -->
         <div id="businessMobileGuide" style="display: none; max-width: 900px; margin: 0 auto;">
-          <button onclick="hideGuide('businessMobileGuide')" style="background: #f5f5f5; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600;">← Back to guides</button>
+          <button onclick="hideGuide('businessMobileGuide')" style="background: #1a1a1a; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600; transition: all 0.3s;">← Back to guides</button>
           
           <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">Business Mobile Contract Strategy</h1>
           <p style="font-size: 1.125rem; color: #737373; margin-bottom: 3rem;">SIM-only vs handset contracts and fleet optimization for UK businesses.</p>
@@ -2347,7 +3040,7 @@
 
         <!-- Guide 10: BT Copper Switch-off -->
         <div id="copperSwitchoffGuide" style="display: none; max-width: 900px; margin: 0 auto;">
-          <button onclick="hideGuide('copperSwitchoffGuide')" style="background: #f5f5f5; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600;">← Back to guides</button>
+          <button onclick="hideGuide('copperSwitchoffGuide')" style="background: #1a1a1a; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600; transition: all 0.3s;">← Back to guides</button>
           
           <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">BT Copper Network Switch-off 2027</h1>
           <p style="font-size: 1.125rem; color: #737373; margin-bottom: 3rem;">Complete migration planning guide for UK businesses ahead of PSTN/ISDN shutdown.</p>
@@ -2420,7 +3113,7 @@
 
         <!-- Contract Exit Strategies Guide -->
         <div id="contractExitGuide" style="display: none; max-width: 900px; margin: 0 auto;">
-          <button onclick="hideGuide('contractExitGuide')" style="background: #f5f5f5; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600;">← Back to guides</button>
+          <button onclick="hideGuide('contractExitGuide')" style="background: #1a1a1a; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; margin-bottom: 2rem; font-weight: 600; transition: all 0.3s;">← Back to guides</button>
           
           <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">Contract Exit Strategies</h1>
           <p style="font-size: 1.125rem; color: #737373; margin-bottom: 3rem;">Legal pathways for terminating supplier contracts early across energy, payments and connectivity services.</p>
@@ -2802,7 +3495,7 @@
         <p>SwitcherMate Business provides independent contract benchmarking and supplier comparison services for UK businesses across:</p>
         <ul>
           <li>Business Energy (gas, electricity, onsite generation)</li>
-          <li>Card Payments (merchant services, terminal solutions)</li>
+          <li>Card Machines (merchant services, terminal solutions)</li>
           <li>Broadband & VoIP (connectivity and telephony)</li>
           <li>Business Mobile (SIM-only and handset contracts)</li>
         </ul>
@@ -2845,7 +3538,7 @@
         <p>Typical switching timelines vary by service:</p>
         <ul>
           <li><strong>Business Energy:</strong> 14-28 days from contract signing</li>
-          <li><strong>Card Payments:</strong> 7-14 days for terminal setup and merchant account activation</li>
+          <li><strong>Card Machines:</strong> 7-14 days for terminal setup and merchant account activation</li>
           <li><strong>Broadband/VoIP:</strong> 10-21 days depending on infrastructure requirements</li>
           <li><strong>Business Mobile:</strong> 10-15 days including number porting</li>
         </ul>
@@ -2921,7 +3614,7 @@
           <div class="footer-col">
             <h4>Solutions</h4>
             <ul class="footer-links">
-              <li><a href="https://wa.me/447555632494?text=Hi%2C%20Card%20Payments%20quote%20please.">Card Payments</a></li>
+              <li><a href="https://wa.me/447555632494?text=Hi%2C%20Card%20Machines%20quote%20please.">Card Payments</a></li>
               <li><a href="https://wa.me/447555632494?text=Hi%2C%20Business%20Energy%20quote%20please.">Business Energy</a></li>
               <li><a href="https://wa.me/447555632494?text=Hi%2C%20Broadband%20quote%20please.">Business Broadband</a></li>
               <li><a href="https://wa.me/447555632494?text=Hi%2C%20VoIP%20quote%20please.">Business VoIP</a></li>
@@ -2943,18 +3636,18 @@
             <div style="margin-bottom: 1.5rem; font-size: 0.875rem; line-height: 1.7;">
               <div style="margin-bottom: 0.75rem;">
                 <div style="color: rgba(255, 255, 255, 0.6); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Support & enquiries:</div>
-                <a href="/cdn-cgi/l/email-protection#493a3c3939263b3d093a3e203d2a212c3b24283d2c2b3c3a20272c3a3a672a2624" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; display: block; margin-bottom: 0.125rem; transition: color 0.2s ease;"><span class="__cf_email__" data-cfemail="a4d7d1d4d4cbd6d0e4d7d3cdd0c7ccc1d6c9c5d0c1c6d1d7cdcac1d7d78ac7cbc9">[email&#160;protected]</span></a>
-                <a href="/cdn-cgi/l/email-protection#0b62656d644b787c627f68636e79666a7f6e697e7862656e787825686466" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; display: block; margin-bottom: 0.125rem; transition: color 0.2s ease;"><span class="__cf_email__" data-cfemail="a3cacdc5cce3d0d4cad7c0cbc6d1cec2d7c6c1d6d0cacdc6d0d08dc0ccce">[email&#160;protected]</span></a>
-                <a href="tel:07343051081" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; display: block; transition: color 0.2s ease;">07343 051081</a>
+                <a href="/cdn-cgi/l/email-protection#493a3c3939263b3d093a3e203d2a212c3b24283d2c2b3c3a20272c3a3a672a2624" style="color: #ffffff; text-decoration: none; display: block; margin-bottom: 0.125rem; transition: color 0.2s ease;"><span class="__cf_email__" data-cfemail="a4d7d1d4d4cbd6d0e4d7d3cdd0c7ccc1d6c9c5d0c1c6d1d7cdcac1d7d78ac7cbc9">[email&#160;protected]</span></a>
+                <a href="/cdn-cgi/l/email-protection#0b62656d644b787c627f68636e79666a7f6e697e7862656e787825686466" style="color: #ffffff; text-decoration: none; display: block; margin-bottom: 0.125rem; transition: color 0.2s ease;"><span class="__cf_email__" data-cfemail="a3cacdc5cce3d0d4cad7c0cbc6d1cec2d7c6c1d6d0cacdc6d0d08dc0ccce">[email&#160;protected]</span></a>
+                <a href="tel:07343051081" style="color: #ffffff; text-decoration: none; display: block; transition: color 0.2s ease;">07343 051081</a>
               </div>
               <div>
                 <div style="color: rgba(255, 255, 255, 0.6); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Call us:</div>
-                <a href="tel:08009124173" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; display: block; transition: color 0.2s ease;">0800 912 4173</a>
+                <a href="tel:08009124173" style="color: #ffffff; text-decoration: none; display: block; transition: color 0.2s ease;">0800 912 4173</a>
               </div>
             </div>
             <p style="margin-bottom: 1rem; font-size: 0.9375rem;">24/7 WhatsApp access throughout your switching process, with dedicated account support during office hours.</p>
             <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
-              <div style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.6); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">Enery Ombudsman ADR Member</div>
+              <div style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.6); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">Energy Ombudsman ADR Member</div>
               <img src="energy-ombudsman-logo.png" alt="Energy Ombudsman" style="height: 32px; width: auto; opacity: 0.85;">
             </div>
           </div>
@@ -2980,11 +3673,6 @@
       <button class="menu-item" data-page="resources">Business Resources</button>
       <button class="menu-item" data-page="privacy">Privacy Policy</button>
       <button class="menu-item" data-page="terms">Terms & Conditions</button>
-    </div>
-    <div class="menu-footer">
-      <a href="https://wa.me/447555632494?text=Hi%2C%20let%27s%20chat!" class="menu-cta">
-        💬 Chat on WhatsApp
-      </a>
     </div>
   </div>
 
