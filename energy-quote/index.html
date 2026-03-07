@@ -760,7 +760,14 @@
       <p>Prefer to speak first? Book a 20-minute consultation. We'll review your energy costs and show you exactly how much you could save.</p>
       
       <div class="calendar-embed">
-        <iframe src="https://api.leadconnectorhq.com/widget/booking/switchermate" scrolling="yes"></iframe>
+        <iframe 
+          src="https://api.leadconnectorhq.com/widget/booking/switchermate" 
+          style="width: 100%; border: none; overflow: hidden;" 
+          scrolling="yes"
+          id="booking-calendar"
+          title="Book your energy quote call"
+          allow="geolocation; microphone; camera"
+        ></iframe>
       </div>
 
       <div style="text-align: center; margin-top: 3rem;">
@@ -821,5 +828,22 @@
     </div>
   </footer>
 
+  <script>
+    // Ensure calendar iframe loads properly
+    window.addEventListener('load', function() {
+      const iframe = document.getElementById('booking-calendar');
+      if (iframe) {
+        // Set minimum height
+        iframe.style.minHeight = '800px';
+        
+        // Listen for messages from iframe to adjust height
+        window.addEventListener('message', function(e) {
+          if (e.data && e.data.height) {
+            iframe.style.height = e.data.height + 'px';
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
