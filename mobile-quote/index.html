@@ -31,7 +31,7 @@
       font-family: var(--font-display);
       font-size: 16px;
       line-height: 1.6;
-      color: #ffffff;
+      color: #262626;
       background: #0a0a0a;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
@@ -104,26 +104,15 @@
       height: 350px;
       background: radial-gradient(circle, #38B2AC, transparent);
       bottom: 10%;
-      left: 30%;
+      left: 40%;
       animation-delay: 10s;
     }
 
     @keyframes float {
-      0%, 100% {
-        transform: translate(0, 0) scale(1);
-      }
-      33% {
-        transform: translate(30px, -30px) scale(1.1);
-      }
-      66% {
-        transform: translate(-20px, 20px) scale(0.9);
-      }
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(50px, -50px) scale(1.1); }
+      50% { transform: translate(-30px, 40px) scale(0.9); }
+      75% { transform: translate(40px, 30px) scale(1.05); }
     }
 
     /* Header */
@@ -156,13 +145,25 @@
 
     /* Hero Section */
     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 6rem 2rem 4rem;
       position: relative;
+      padding: 6rem 2rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(46,125,210,0.1) 45deg, transparent 90deg, rgba(76,175,80,0.1) 180deg, transparent 270deg);
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      100% { transform: rotate(360deg); }
     }
 
     .hero-content {
@@ -172,29 +173,42 @@
       margin: 0 auto;
     }
 
-    h1 {
-      font-size: clamp(2.5rem, 6vw, 4rem);
+    .hero h1 {
+      font-size: 3.5rem;
       font-weight: 900;
       color: white;
       margin-bottom: 1.5rem;
+      letter-spacing: -2px;
       line-height: 1.1;
-      letter-spacing: -0.02em;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
     }
 
-    h1 span {
-      background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%);
+    .hero h1 span {
+      background: var(--gradient-brand);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
     .hero p {
-      font-size: 1.25rem;
-      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.375rem;
+      color: rgba(255, 255, 255, 0.8);
       margin-bottom: 3rem;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .cta-buttons {
@@ -202,6 +216,7 @@
       gap: 1.5rem;
       justify-content: center;
       flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease-out 0.6s both;
       margin-bottom: 3rem;
     }
 
@@ -211,17 +226,34 @@
       gap: 0.75rem;
       background: var(--gradient-brand);
       color: white;
-      padding: 1.25rem 2.5rem;
-      border-radius: 100px;
       text-decoration: none;
+      padding: 1.5rem 3rem;
+      border-radius: 100px;
+      font-weight: 800;
       font-size: 1.125rem;
-      font-weight: 700;
       box-shadow: 0 10px 40px rgba(46, 125, 210, 0.4);
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-whatsapp::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn-whatsapp:hover::before {
+      left: 100%;
     }
 
     .btn-whatsapp:hover {
-      transform: translateY(-3px) scale(1.05);
+      transform: translateY(-5px) scale(1.05);
       box-shadow: 0 15px 50px rgba(46, 125, 210, 0.6);
     }
 
@@ -232,102 +264,130 @@
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
       color: white;
-      padding: 1.25rem 2.5rem;
-      border-radius: 100px;
       text-decoration: none;
-      font-size: 1.125rem;
+      padding: 1.5rem 3rem;
+      border-radius: 100px;
       font-weight: 700;
+      font-size: 1.125rem;
       border: 2px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     .btn-phone:hover {
       background: rgba(255, 255, 255, 0.1);
       border-color: rgba(255, 255, 255, 0.4);
-      transform: translateY(-3px);
+      transform: translateY(-5px);
       box-shadow: 0 15px 50px rgba(255, 255, 255, 0.2);
     }
 
     .trust-badges {
       display: flex;
-      gap: 2rem;
+      gap: 2.5rem;
       justify-content: center;
+      align-items: center;
       flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease-out 0.8s both;
     }
 
     .trust-badge {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 0.9375rem;
-      font-weight: 600;
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9375rem;
+      font-weight: 600;
     }
 
     .trust-badge::before {
       content: '✓';
-      color: #4CAF50;
+      width: 24px;
+      height: 24px;
+      background: var(--gradient-brand);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: white;
       font-weight: 900;
-      font-size: 1.25rem;
     }
 
     /* Benefits Section */
     .benefits {
       padding: 6rem 2rem;
-      position: relative;
     }
 
     .benefits h2 {
       text-align: center;
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: white;
+      font-size: 2.75rem;
+      font-weight: 900;
       margin-bottom: 4rem;
+      color: white;
+      letter-spacing: -1px;
     }
 
     .benefits-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2.5rem;
-      max-width: 1100px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
     .benefit-item {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 3rem 2rem;
       border-radius: 20px;
-      padding: 2.5rem;
-      transition: all 0.3s ease;
+      text-align: center;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      animation: fadeInUp 0.8s ease-out both;
     }
 
+    .benefit-item:nth-child(1) { animation-delay: 0.1s; }
+    .benefit-item:nth-child(2) { animation-delay: 0.2s; }
+    .benefit-item:nth-child(3) { animation-delay: 0.3s; }
+
     .benefit-item:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(46, 125, 210, 0.5);
+      box-shadow: 0 20px 60px rgba(46, 125, 210, 0.3);
     }
 
     .benefit-icon {
-      font-size: 3rem;
-      margin-bottom: 1.5rem;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-brand);
+      border-radius: 50%;
+      font-size: 2.5rem;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 125, 210, 0.7); }
+      50% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(46, 125, 210, 0); }
     }
 
     .benefit-item h3 {
-      color: white;
       font-size: 1.5rem;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 1rem;
+      color: white;
     }
 
     .benefit-item p {
-      color: rgba(255, 255, 255, 0.75);
-      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.7);
       font-size: 1rem;
+      line-height: 1.7;
     }
 
-    /* How It Works */
+    /* Steps Section */
     .how-it-works {
       padding: 6rem 2rem;
       background: rgba(255, 255, 255, 0.02);
@@ -335,155 +395,93 @@
 
     .how-it-works h2 {
       text-align: center;
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: white;
+      font-size: 2.75rem;
+      font-weight: 900;
       margin-bottom: 4rem;
+      color: white;
+      letter-spacing: -1px;
     }
 
     .steps {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 3rem;
-      max-width: 1000px;
-      margin: 0 auto;
+      max-width: 1100px;
+      margin: 0 auto 4rem;
     }
 
     .step {
-      text-align: center;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 3rem;
+      border-radius: 20px;
       position: relative;
+      transition: all 0.5s ease;
+      animation: fadeInUp 0.8s ease-out both;
+    }
+
+    .step:nth-child(1) { animation-delay: 0.2s; }
+    .step:nth-child(2) { animation-delay: 0.4s; }
+    .step:nth-child(3) { animation-delay: 0.6s; }
+
+    .step:hover {
+      transform: translateY(-10px);
+      border-color: rgba(76, 175, 80, 0.5);
+      box-shadow: 0 20px 60px rgba(76, 175, 80, 0.3);
     }
 
     .step-number {
-      display: inline-block;
-      width: 60px;
-      height: 60px;
+      width: 70px;
+      height: 70px;
       background: var(--gradient-brand);
       border-radius: 50%;
       color: white;
-      font-size: 1.75rem;
-      font-weight: 900;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 1.5rem;
+      font-weight: 900;
+      font-size: 2rem;
+      margin-bottom: 2rem;
       box-shadow: 0 10px 30px rgba(46, 125, 210, 0.4);
     }
 
     .step h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
       color: white;
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
     }
 
     .step p {
       color: rgba(255, 255, 255, 0.7);
-      font-size: 0.9375rem;
-      line-height: 1.6;
+      font-size: 1rem;
+      line-height: 1.7;
     }
 
     /* Calendar Section */
     .calendar-section {
       padding: 6rem 2rem;
-      text-align: center;
     }
 
     .calendar-section h2 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: white;
+      text-align: center;
+      font-size: 2.75rem;
+      font-weight: 900;
       margin-bottom: 1.5rem;
+      color: white;
+      letter-spacing: -1px;
     }
 
-    .calendar-section p {
-      }
-
-      .calendar-section {
-        padding: 3rem 1rem;
-      }
-
-      .calendar-embed {
-        max-width: 100%;
-        border-radius: 16px;
-        padding: 1rem;
-      color: rgba(255, 255, 255, 0.75);
-      }
-
-      .calendar-section {
-        padding: 3rem 1rem;
-      }
-
-      .calendar-embed {
-        max-width: 100%;
-        border-radius: 16px;
-        padding: 1rem;
-      font-size: 1.125rem;
-      }
-
-      .calendar-section {
-        padding: 3rem 1rem;
-      }
-
-      .calendar-embed {
-        max-width: 100%;
-        border-radius: 16px;
-        padding: 1rem;
+    .calendar-section > div > p {
+      text-align: center;
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.7);
       margin-bottom: 3rem;
-      }
-
-      .calendar-section {
-        padding: 3rem 1rem;
-      }
-
-      .calendar-embed {
-        max-width: 100%;
-        border-radius: 16px;
-        padding: 1rem;
-      max-width: 600px;
-      }
-
-      .calendar-section {
-        padding: 3rem 1rem;
-      }
-
-      .calendar-embed {
-        max-width: 100%;
-        border-radius: 16px;
-        padding: 1rem;
+      max-width: 700px;
       margin-left: auto;
-      }
-
-      .calendar-section {
-        padding: 3rem 1rem;
-      }
-
-      .calendar-embed {
-        max-width: 100%;
-        border-radius: 16px;
-        padding: 1rem;
       margin-right: auto;
-      }
-
-      .calendar-section {
-        padding: 3rem 1rem;
-      }
-
-      .calendar-embed {
-        max-width: 100%;
-        border-radius: 16px;
-        padding: 1rem;
     }
-      }
-
-      .calendar-section {
-        padding: 3rem 1rem;
-      }
-
-      .calendar-embed {
-        max-width: 100%;
-        border-radius: 16px;
-        padding: 1rem;
 
     .calendar-embed {
       max-width: 900px;
@@ -492,22 +490,23 @@
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 24px;
-      padding: 2rem;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 0.8s ease-out 0.4s both;
     }
 
     .calendar-embed iframe {
       width: 100%;
-      height: 700px;
+      min-height: 800px;
       border: none;
-      border-radius: 12px;
     }
 
+    /* Footer */
     /* Footer */
     footer {
       background: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(20px);
-      padding: 3rem 2rem 2rem;
+      padding: 3rem 1.5rem 2rem;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
@@ -596,12 +595,13 @@
     }
 
     /* Mobile Responsive */
+    /* Mobile Responsive */
     @media (max-width: 768px) {
       .hero {
         padding: 3rem 1.5rem;
       }
 
-      h1 {
+      .hero h1 {
         font-size: 2rem;
         letter-spacing: -1px;
         margin-bottom: 1rem;
@@ -639,16 +639,6 @@
       }
 
       .calendar-section p {
-      }
-
-      .calendar-section {
-        padding: 3rem 1rem;
-      }
-
-      .calendar-embed {
-        max-width: 100%;
-        border-radius: 16px;
-        padding: 1rem;
         font-size: 0.9375rem;
       }
 
@@ -661,16 +651,6 @@
         border-radius: 16px;
         padding: 1rem;
       }
-      }
-
-      .calendar-section {
-        padding: 3rem 1rem;
-      }
-
-      .calendar-embed {
-        max-width: 100%;
-        border-radius: 16px;
-        padding: 1rem;
 
       .benefit-icon {
         font-size: 2rem;
@@ -687,7 +667,7 @@
       }
 
       .calendar-embed iframe {
-        height: 600px;
+        min-height: 1000px;
       }
     }
 
@@ -706,7 +686,7 @@
         padding: 0.5rem;
       }
 
-      h1 {
+      .hero h1 {
         font-size: 1.75rem;
       }
 
@@ -745,10 +725,9 @@
   </style>
 </head>
 <body>
+
   <!-- Animated Background -->
   <div class="animated-bg"></div>
-  
-  <!-- Floating Orbs -->
   <div class="floating-orbs">
     <div class="orb orb1"></div>
     <div class="orb orb2"></div>
@@ -763,13 +742,13 @@
   <!-- Hero Section -->
   <div class="hero">
     <div class="hero-content">
-      <h1>Business Mobile <span>Phones & SIMs</span></h1>
-      <p>Compare unlimited data plans. Multi-user packages. Fleet management. Get the best rates for your business.</p>
+      <h1>Business <span>Mobile Quote</span></h1>
+      <p>Compare EE, Vodafone, O2, Three. Unlimited data packages. Multi-user deals. Get your quote now.</p>
       
       <div class="cta-buttons">
         <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20business%20mobile%20phones%20and%20SIMs" class="btn-whatsapp">
           <span style="font-size: 1.5rem;">💬</span>
-          Get Mobile Quote on WhatsApp
+          Get a Mobile Quote on WhatsApp
         </a>
         <a href="tel:08009124173" class="btn-phone">
           <span style="font-size: 1.5rem;">📞</span>
@@ -779,7 +758,7 @@
 
       <div class="trust-badges">
         <div class="trust-badge">Independent Broker</div>
-        <div class="trust-badge">All Major Networks</div>
+        <div class="trust-badge">All Card Types</div>
         <div class="trust-badge">Instant Quotes</div>
       </div>
     </div>
@@ -830,6 +809,13 @@
           <p>Choose your plan, we handle setup and number porting. Simple.</p>
         </div>
       </div>
+
+      <div style="text-align: center;">
+        <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20business%20mobile%20phones%20and%20SIMs" class="btn-whatsapp">
+          <span style="font-size: 1.5rem;">💬</span>
+          Get Your Mobile Quote Now
+        </a>
+      </div>
     </div>
   </section>
 
@@ -874,9 +860,9 @@
       <div class="footer-section">
         <h3>Services</h3>
         <a href="https://wa.me/447555632494?text=Hi%2C%20Business%20Energy%20quote%20please.">Business Energy</a>
-        <a href="https://wa.me/447555632494?text=Hi%2C%20Card%20Machines%20quote%20please.">Card Machines</a>
+        <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20to%20reduce%20our%20card%20machine%20fees">Card Machines</a>
         <a href="https://wa.me/447555632494?text=Hi%2C%20Broadband%20quote%20please.">Business Broadband</a>
-        <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20business%20mobile%20phones%20and%20SIMs">Business Mobile</a>
+        <a href="https://wa.me/447555632494?text=Hi%2C%20Mobile%20quote%20please.">Business Mobile</a>
       </div>
 
       <div class="footer-section">
