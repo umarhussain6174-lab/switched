@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Mobile Phones & SIMs | Mobile Quote | SwitcherMate Business</title>
+  <meta name="description" content="Compare business mobile plans. Unlimited data, multi-user packages. Independent broker. Free quote.">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --brand-blue: #2E7DD2;
+      --brand-green: #4CAF50;
+      --gradient-brand: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%);
+      --gradient-premium: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4CAF50 100%);
+      --font-display: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    body {
+      font-family: var(--font-display);
+      font-size: 16px;
+      line-height: 1.6;
+      color: #ffffff;
+      background: #0a0a0a;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Animated Background */
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+      z-index: -1;
+    }
+
+    .animated-bg::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(46,125,210,0.15) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: moveGrid 20s linear infinite;
+    }
+
+    @keyframes moveGrid {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50px, 50px); }
+    }
+
+    .floating-orbs {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.3;
+      animation: float 20s infinite ease-in-out;
+    }
+
+    .orb1 {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, #2E7DD2, transparent);
+      top: 10%;
+      left: 20%;
+      animation-delay: 0s;
+    }
+
+    .orb2 {
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, #4CAF50, transparent);
+      top: 60%;
+      right: 20%;
+      animation-delay: 5s;
+    }
+
+    .orb3 {
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, #38B2AC, transparent);
+      bottom: 10%;
+      left: 30%;
+      animation-delay: 10s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+      }
+      33% {
+        transform: translate(30px, -30px) scale(1.1);
+      }
+      66% {
+        transform: translate(-20px, 20px) scale(0.9);
+      }
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header */
+    .header {
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(20px);
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      animation: slideDown 0.6s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 900;
+      background: var(--gradient-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: center;
+      letter-spacing: -0.5px;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 900;
+      color: white;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--gradient-brand);
+      color: white;
+      padding: 1.25rem 2.5rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 1.125rem;
+      font-weight: 700;
+      box-shadow: 0 10px 40px rgba(46, 125, 210, 0.4);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 15px 50px rgba(46, 125, 210, 0.6);
+    }
+
+    .btn-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      color: white;
+      padding: 1.25rem 2.5rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 1.125rem;
+      font-weight: 700;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .btn-phone:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 50px rgba(255, 255, 255, 0.2);
+    }
+
+    .trust-badges {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .trust-badge {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .trust-badge::before {
+      content: '✓';
+      color: #4CAF50;
+      font-weight: 900;
+      font-size: 1.25rem;
+    }
+
+    /* Benefits Section */
+    .benefits {
+      padding: 6rem 2rem;
+      position: relative;
+    }
+
+    .benefits h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 4rem;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .benefit-item {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .benefit-item:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .benefit-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .benefit-item h3 {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .benefit-item p {
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    /* How It Works */
+    .how-it-works {
+      padding: 6rem 2rem;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .how-it-works h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 4rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .step {
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background: var(--gradient-brand);
+      border-radius: 50%;
+      color: white;
+      font-size: 1.75rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 10px 30px rgba(46, 125, 210, 0.4);
+    }
+
+    .step h3 {
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .step p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* Calendar Section */
+    .calendar-section {
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+
+    .calendar-section h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 1.5rem;
+    }
+
+    .calendar-section p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 1.125rem;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .calendar-embed {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .calendar-embed iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(20px);
+      padding: 3rem 2rem 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+      color: white;
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      line-height: 1.8;
+      display: block;
+    }
+
+    .footer-section a:hover {
+      color: white;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-logo-text {
+      font-size: 1.25rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .footer-ombudsman {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-ombudsman-label {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-ombudsman img {
+      height: 32px;
+      width: auto;
+      opacity: 0.85;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+
+    .footer-link {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-link:hover {
+      color: white;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 3rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .btn-whatsapp,
+      .btn-phone {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      .benefits,
+      .how-it-works,
+      .calendar-section {
+        padding: 3rem 1.5rem;
+      }
+
+      .benefits h2,
+      .how-it-works h2,
+      .calendar-section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+      }
+
+      .calendar-section p {
+        font-size: 0.9375rem;
+      }
+
+      .benefit-icon {
+        font-size: 2rem;
+      }
+
+      .benefit-item h3,
+      .step h3 {
+        font-size: 1.125rem;
+      }
+
+      .benefit-item p,
+      .step p {
+        font-size: 0.9375rem;
+      }
+
+      .calendar-embed iframe {
+        height: 600px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 2.5rem 1rem;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      .hero p {
+        font-size: 0.9375rem;
+      }
+
+      .btn-whatsapp,
+      .btn-phone {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.9375rem;
+      }
+
+      .benefits,
+      .how-it-works,
+      .calendar-section {
+        padding: 2.5rem 1rem;
+      }
+
+      .benefits h2,
+      .how-it-works h2,
+      .calendar-section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="animated-bg"></div>
+  
+  <!-- Floating Orbs -->
+  <div class="floating-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">SwitcherMate Business</div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Business Mobile <span>Phones & SIMs</span></h1>
+      <p>Compare unlimited data plans. Multi-user packages. Fleet management. Get the best rates for your business.</p>
+      
+      <div class="cta-buttons">
+        <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20business%20mobile%20phones%20and%20SIMs" class="btn-whatsapp">
+          <span style="font-size: 1.5rem;">💬</span>
+          Get Mobile Quote on WhatsApp
+        </a>
+        <a href="tel:08009124173" class="btn-phone">
+          <span style="font-size: 1.5rem;">📞</span>
+          0800 912 4173
+        </a>
+      </div>
+
+      <div class="trust-badges">
+        <div class="trust-badge">Independent Broker</div>
+        <div class="trust-badge">All Major Networks</div>
+        <div class="trust-badge">Instant Quotes</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Benefits -->
+  <section class="benefits">
+    <div class="container">
+      <h2>Why Businesses Choose Us for Mobile</h2>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <div class="benefit-icon">📱</div>
+          <h3>All Major Networks</h3>
+          <p>Compare EE, Vodafone, Three, O2 and more. We find the best coverage and pricing for your locations and usage patterns.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">📊</div>
+          <h3>Unlimited Data Plans</h3>
+          <p>Truly unlimited packages with no throttling. Perfect for teams that need reliable connectivity on the go.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🔄</div>
+          <h3>Fleet Management</h3>
+          <p>Manage multiple lines, track usage, and control costs from one dashboard. Perfect for growing teams.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Share Your Needs</h3>
+          <p>Tell us how many lines, data requirements, and any device preferences.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Get Quotes</h3>
+          <p>We compare all networks and send you tailored options within hours.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Start Saving</h3>
+          <p>Choose your plan, we handle setup and number porting. Simple.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendar Section -->
+  <section class="calendar-section">
+    <div class="container">
+      <h2>Book Your Mobile Quote Call</h2>
+      <p>Pick a time that suits you. Our mobile specialists will call to discuss your requirements and pricing options.</p>
+      
+      <div class="calendar-embed" style="background: rgba(10, 10, 10, 0.8); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        <iframe src="https://api.leadconnectorhq.com/widget/booking/4zYLJFNWAWyUJHCHF7gp" 
+                style="width: 100%; border: none; overflow: hidden;" 
+                scrolling="no" 
+                id="ghl-calendar-mobile"></iframe>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="https://switchermatebusiness.com/" style="color: rgba(255,255,255,0.7); font-size: 1rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; transition: color 0.3s; font-weight: 600;">
+          <span>←</span>
+          <span>Back to site</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <div class="footer-logo-text">SwitcherMate Business</div>
+        </div>
+        <p>Independent UK business cost broker. Helping businesses switch smarter and save more.</p>
+        <div class="footer-ombudsman">
+          <div class="footer-ombudsman-label">Energy Ombudsman ADR Member</div>
+          <img src="../energy-ombudsman-logo.png" alt="Energy Ombudsman">
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Services</h3>
+        <a href="https://wa.me/447555632494?text=Hi%2C%20Business%20Energy%20quote%20please.">Business Energy</a>
+        <a href="https://wa.me/447555632494?text=Hi%2C%20Card%20Machines%20quote%20please.">Card Machines</a>
+        <a href="https://wa.me/447555632494?text=Hi%2C%20Broadband%20quote%20please.">Business Broadband</a>
+        <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20business%20mobile%20phones%20and%20SIMs">Business Mobile</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p><strong>Freephone:</strong><br><a href="tel:08009124173">0800 912 4173</a></p>
+        <p><strong>WhatsApp:</strong><br><a href="https://wa.me/447555632494">+44 7555 632494</a></p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Company</h3>
+        <p>SwitcherMate Business is a trading name of SwitcherMate Ltd</p>
+        <p>Company No. 16568958</p>
+        <p>Registered in England and Wales</p>
+        <p><a href="https://switchermatebusiness.com" class="footer-link">← Back to site</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 SwitcherMate Business. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Ensure calendar iframe loads properly
+    window.addEventListener('load', function() {
+      const iframe = document.getElementById('booking-calendar');
+      if (iframe) {
+        // Set minimum height
+        iframe.style.minHeight = '800px';
+        
+        // Listen for messages from iframe to adjust height
+        window.addEventListener('message', function(e) {
+          if (e.data && e.data.height) {
+            iframe.style.height = e.data.height + 'px';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
