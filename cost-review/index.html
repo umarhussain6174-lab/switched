@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Business Cost Review | Save 20-40% | SwitcherMate Business</title>
+  <meta name="description" content="Free business energy quote. Compare gas & electricity rates. Save 20-40% on energy costs. No obligation.">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --brand-blue: #2E7DD2;
+      --brand-green: #4CAF50;
+      --gradient-brand: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%);
+      --gradient-premium: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4CAF50 100%);
+      --font-display: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    body {
+      font-family: var(--font-display);
+      font-size: 16px;
+      line-height: 1.6;
+      color: #262626;
+      background: #0a0a0a;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Animated Background */
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+      z-index: -1;
+    }
+
+    .animated-bg::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(46,125,210,0.15) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: moveGrid 20s linear infinite;
+    }
+
+    @keyframes moveGrid {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50px, 50px); }
+    }
+
+    .floating-orbs {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.3;
+      animation: float 20s infinite ease-in-out;
+    }
+
+    .orb1 {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, #2E7DD2, transparent);
+      top: 10%;
+      left: 20%;
+      animation-delay: 0s;
+    }
+
+    .orb2 {
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, #4CAF50, transparent);
+      top: 60%;
+      right: 20%;
+      animation-delay: 5s;
+    }
+
+    .orb3 {
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, #38B2AC, transparent);
+      bottom: 10%;
+      left: 40%;
+      animation-delay: 10s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(50px, -50px) scale(1.1); }
+      50% { transform: translate(-30px, 40px) scale(0.9); }
+      75% { transform: translate(40px, 30px) scale(1.05); }
+    }
+
+    /* Header */
+    .header {
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(20px);
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      animation: slideDown 0.6s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 900;
+      background: var(--gradient-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: center;
+      letter-spacing: -0.5px;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 6rem 2rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(46,125,210,0.1) 45deg, transparent 90deg, rgba(76,175,80,0.1) 180deg, transparent 270deg);
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      100% { transform: rotate(360deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 1.5rem;
+      letter-spacing: -2px;
+      line-height: 1.1;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    .hero h1 span {
+      background: var(--gradient-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.375rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 3rem;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease-out 0.6s both;
+      margin-bottom: 3rem;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--gradient-brand);
+      color: white;
+      text-decoration: none;
+      padding: 1.5rem 3rem;
+      border-radius: 100px;
+      font-weight: 800;
+      font-size: 1.125rem;
+      box-shadow: 0 10px 40px rgba(46, 125, 210, 0.4);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-whatsapp::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn-whatsapp:hover::before {
+      left: 100%;
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 50px rgba(46, 125, 210, 0.6);
+    }
+
+    .btn-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      color: white;
+      text-decoration: none;
+      padding: 1.5rem 3rem;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 1.125rem;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .btn-phone:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 50px rgba(255, 255, 255, 0.2);
+    }
+
+    .trust-badges {
+      display: flex;
+      gap: 2.5rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease-out 0.8s both;
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9375rem;
+      font-weight: 600;
+    }
+
+    .trust-badge::before {
+      content: '✓';
+      width: 24px;
+      height: 24px;
+      background: var(--gradient-brand);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: white;
+      font-weight: 900;
+    }
+
+    /* Glass Card Container */
+    .glass-container {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      position: relative;
+    }
+
+    /* Benefits Section */
+    .benefits {
+      padding: 6rem 2rem;
+    }
+
+    .benefits h2 {
+      text-align: center;
+      font-size: 2.75rem;
+      font-weight: 900;
+      margin-bottom: 4rem;
+      color: white;
+      letter-spacing: -1px;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .benefit-item {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 3rem 2rem;
+      border-radius: 20px;
+      text-align: center;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      animation: fadeInUp 0.8s ease-out both;
+    }
+
+    .benefit-item:nth-child(1) { animation-delay: 0.1s; }
+    .benefit-item:nth-child(2) { animation-delay: 0.2s; }
+    .benefit-item:nth-child(3) { animation-delay: 0.3s; }
+    .benefit-item:nth-child(4) { animation-delay: 0.4s; }
+
+    .benefit-item:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(46, 125, 210, 0.5);
+      box-shadow: 0 20px 60px rgba(46, 125, 210, 0.3);
+    }
+
+    .benefit-icon {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-brand);
+      border-radius: 50%;
+      font-size: 2.5rem;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 125, 210, 0.7); }
+      50% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(46, 125, 210, 0); }
+    }
+
+    .benefit-item h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .benefit-item p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* Steps Section */
+    .how-it-works {
+      padding: 6rem 2rem;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .how-it-works h2 {
+      text-align: center;
+      font-size: 2.75rem;
+      font-weight: 900;
+      margin-bottom: 4rem;
+      color: white;
+      letter-spacing: -1px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      max-width: 1100px;
+      margin: 0 auto 4rem;
+    }
+
+    .step {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 3rem;
+      border-radius: 20px;
+      position: relative;
+      transition: all 0.5s ease;
+      animation: fadeInUp 0.8s ease-out both;
+    }
+
+    .step:nth-child(1) { animation-delay: 0.2s; }
+    .step:nth-child(2) { animation-delay: 0.4s; }
+    .step:nth-child(3) { animation-delay: 0.6s; }
+
+    .step:hover {
+      transform: translateY(-10px);
+      border-color: rgba(76, 175, 80, 0.5);
+      box-shadow: 0 20px 60px rgba(76, 175, 80, 0.3);
+    }
+
+    .step-number {
+      width: 70px;
+      height: 70px;
+      background: var(--gradient-brand);
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(46, 125, 210, 0.4);
+    }
+
+    .step h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .step p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* Calendar Section */
+    .calendar-section {
+      padding: 6rem 2rem;
+    }
+
+    .calendar-section h2 {
+      text-align: center;
+      font-size: 2.75rem;
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      color: white;
+      letter-spacing: -1px;
+    }
+
+    .calendar-section > div > p {
+      text-align: center;
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .calendar-embed {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+
+    .calendar-embed iframe {
+      width: 100%;
+      min-height: 800px;
+      border: none;
+    }
+
+    /* Trust Section */
+    .trust-section {
+      background: rgba(46, 125, 210, 0.05);
+      padding: 4rem 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .trust-section h3 {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    /* Footer */
+    /* Footer */
+    footer {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(20px);
+      padding: 3rem 1.5rem 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+      color: white;
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      line-height: 1.8;
+      display: block;
+    }
+
+    .footer-section a:hover {
+      color: white;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-logo-text {
+      font-size: 1.25rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #2E7DD2 0%, #4CAF50 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .footer-ombudsman {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-ombudsman-label {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-ombudsman img {
+      height: 32px;
+      width: auto;
+      opacity: 0.85;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+
+    .footer-link {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-link:hover {
+      color: white;
+    }
+
+    /* Mobile Responsive */
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 3rem 1.5rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .btn-whatsapp,
+      .btn-phone {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      .benefits,
+      .how-it-works,
+      .calendar-section {
+        padding: 3rem 1.5rem;
+      }
+
+      .benefits h2,
+      .how-it-works h2,
+      .calendar-section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+      }
+
+      .calendar-section p {
+        font-size: 0.9375rem;
+      }
+
+      .benefit-icon {
+        font-size: 2rem;
+      }
+
+      .benefit-item h3,
+      .step h3 {
+        font-size: 1.125rem;
+      }
+
+      .benefit-item p,
+      .step p {
+        font-size: 0.9375rem;
+      }
+
+      .calendar-embed iframe {
+        min-height: 1000px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 2.5rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 1.75rem;
+      }
+
+      .hero p {
+        font-size: 0.9375rem;
+      }
+
+      .btn-whatsapp,
+      .btn-phone {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.9375rem;
+      }
+
+      .benefits,
+      .how-it-works,
+      .calendar-section {
+        padding: 2.5rem 1rem;
+      }
+
+      .benefits h2,
+      .how-it-works h2,
+      .calendar-section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="animated-bg"></div>
+  <div class="floating-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">SwitcherMate Business</div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Cut Your <span>Business Running Costs</span></h1>
+      <p>Free review of energy, payments, broadband and mobile. Independent broker. Get your quote now. Typical savings 20-40%.</p>
+      
+      <div class="cta-buttons">
+        <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20free%20cost%20review" class="btn-whatsapp">
+          <span style="font-size: 1.5rem;">💬</span>
+          Get Free Cost Review on WhatsApp
+        </a>
+        <a href="tel:08009124173" class="btn-phone">
+          <span style="font-size: 1.5rem;">📞</span>
+          0800 912 4173
+        </a>
+      </div>
+
+      <div class="trust-badges">
+        <div class="trust-badge">Independent Broker</div>
+        <div class="trust-badge">All Services</div>
+        <div class="trust-badge">Instant Quotes</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Benefits -->
+  <section class="benefits">
+    <div class="container">
+      <h2>What We Review</h2>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <div class="benefit-icon">⚡</div>
+          <h3>Business Energy</h3>
+          <p>Gas, electricity & renewables. Compare 17+ suppliers.</p>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">💳</div>
+          <h3>Card Payments</h3>
+          <p>Merchant services. Lower transaction fees.</p>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">🌐</div>
+          <h3>Broadband</h3>
+          <p>Full-fibre, leased lines, 5G solutions.</p>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">📱</div>
+          <h3>Business Mobile</h3>
+          <p>SIM-only, handsets, fleet management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Share Your Bills</h3>
+          <p>WhatsApp or email your current bills for energy, payments, broadband or mobile.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>We Benchmark Everything</h3>
+          <p>Compare your current rates against live market prices across all suppliers.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Get Your Quote Now</h3>
+          <p>Instant quote with clear breakdown of potential savings. You choose what to action and when.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20free%20cost%20review" class="btn-whatsapp">
+          <span style="font-size: 1.5rem;">💬</span>
+          Start Your Cost Review Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendar Section -->
+  <section class="calendar-section">
+    <div class="container">
+      <h2>Book Your Free Cost Review Call</h2>
+      <p>Prefer to speak first? Book a 20-minute consultation. We'll discuss your current costs and show you where to save.</p>
+      
+      <div class="calendar-embed" style="background: rgba(10, 10, 10, 0.8); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        <iframe src="https://api.leadconnectorhq.com/widget/booking/4zYLJFNWAWyUJHCHF7gp" 
+                style="width: 100%; border: none; overflow: hidden;" 
+                scrolling="no" 
+                id="ghl-calendar-cost"></iframe>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="https://switchermatebusiness.com/" style="color: rgba(255,255,255,0.7); font-size: 1rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; transition: color 0.3s; font-weight: 600;">
+          <span>←</span>
+          <span>Back to site</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+
+  <!-- Trust Section -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <div class="footer-logo-text">SwitcherMate Business</div>
+        </div>
+        <p>Independent UK business cost broker. Helping businesses switch smarter and save more.</p>
+        <div class="footer-ombudsman">
+          <div class="footer-ombudsman-label">Energy Ombudsman ADR Member</div>
+          <img src="../energy-ombudsman-logo.png" alt="Energy Ombudsman">
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Services</h3>
+        <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20business%20energy%20quote">Business Energy</a>
+        <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20to%20reduce%20our%20card%20machine%20fees">Card Machines</a>
+        <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20business%20broadband%20quote">Business Broadband</a>
+        <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20business%20mobile%20phones%20and%20SIMs">Business Mobile</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p><strong>Freephone:</strong><br><a href="tel:08009124173">0800 912 4173</a></p>
+        <p><strong>WhatsApp:</strong><br><a href="https://wa.me/447555632494">+44 7555 632494</a></p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Company</h3>
+        <p>SwitcherMate Business is a trading name of SwitcherMate Ltd</p>
+        <p>Company No. 16568958</p>
+        <p>Registered in England and Wales</p>
+        <p><a href="https://switchermatebusiness.com" class="footer-link">← Back to site</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 SwitcherMate Business. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Ensure calendar iframe loads properly
+    window.addEventListener('load', function() {
+      const iframe = document.getElementById('booking-calendar');
+      if (iframe) {
+        // Set minimum height
+        iframe.style.minHeight = '800px';
+        
+        // Listen for messages from iframe to adjust height
+        window.addEventListener('message', function(e) {
+          if (e.data && e.data.height) {
+            iframe.style.height = e.data.height + 'px';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
