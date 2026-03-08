@@ -620,32 +620,99 @@
 
     /* Mobile Responsive */
     @media (max-width: 768px) {
+      .hero {
+        padding: 3rem 1.5rem;
+      }
+
       .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        letter-spacing: -1px;
+        margin-bottom: 1rem;
       }
 
       .hero p {
-        font-size: 1.125rem;
+        font-size: 1rem;
+        margin-bottom: 2rem;
       }
 
       .cta-buttons {
         flex-direction: column;
+        gap: 1rem;
       }
 
       .btn-whatsapp,
       .btn-phone {
         width: 100%;
         justify-content: center;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      .benefits,
+      .how-it-works,
+      .calendar-section {
+        padding: 3rem 1.5rem;
       }
 
       .benefits h2,
       .how-it-works h2,
       .calendar-section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+      }
+
+      .calendar-section p {
+        font-size: 0.9375rem;
+      }
+
+      .benefit-icon {
         font-size: 2rem;
+      }
+
+      .benefit-item h3,
+      .step h3 {
+        font-size: 1.125rem;
+      }
+
+      .benefit-item p,
+      .step p {
+        font-size: 0.9375rem;
       }
 
       .calendar-embed iframe {
         min-height: 1000px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 2.5rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 1.75rem;
+      }
+
+      .hero p {
+        font-size: 0.9375rem;
+      }
+
+      .btn-whatsapp,
+      .btn-phone {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.9375rem;
+      }
+
+      .benefits,
+      .how-it-works,
+      .calendar-section {
+        padding: 2.5rem 1rem;
+      }
+
+      .benefits h2,
+      .how-it-works h2,
+      .calendar-section h2 {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -756,18 +823,14 @@
   <!-- Calendar Section -->
   <section class="calendar-section">
     <div class="container">
-      <h2>Book Your Free Cost Review</h2>
+      <h2>Book Your Free Energy Quote Call</h2>
       <p>Prefer to speak first? Book a 20-minute consultation. We'll review your energy costs and show you exactly how much you could save.</p>
       
       <div class="calendar-embed">
-        <iframe 
-          src="https://api.leadconnectorhq.com/widget/booking/switchermate" 
-          style="width: 100%; border: none; overflow: hidden;" 
-          scrolling="yes"
-          id="booking-calendar"
-          title="Book your energy quote call"
-          allow="geolocation; microphone; camera"
-        ></iframe>
+        <iframe src="https://api.leadconnectorhq.com/widget/booking/4zYLJFNWAWyUJHCHF7gp" 
+                style="width: 100%; border: none; overflow: hidden;" 
+                scrolling="no" 
+                id="ghl-calendar-energy"></iframe>
       </div>
 
       <div style="text-align: center; margin-top: 3rem;">
@@ -777,6 +840,8 @@
       </div>
     </div>
   </section>
+
+  <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
 
   <!-- Trust Section -->
   <section class="trust-section">
@@ -802,7 +867,7 @@
 
       <div class="footer-section">
         <h3>Services</h3>
-        <a href="https://wa.me/447555632494?text=Hi%2C%20Business%20Energy%20quote%20please.">Business Energy</a>
+        <a href="https://wa.me/447555632494?text=Hi%2C%20I%27d%20like%20a%20business%20energy%20quote">Business Energy</a>
         <a href="https://wa.me/447555632494?text=Hi%2C%20Card%20Machines%20quote%20please.">Card Machines</a>
         <a href="https://wa.me/447555632494?text=Hi%2C%20Broadband%20quote%20please.">Business Broadband</a>
         <a href="https://wa.me/447555632494?text=Hi%2C%20Mobile%20quote%20please.">Business Mobile</a>
@@ -827,23 +892,5 @@
       © 2026 SwitcherMate Business. All rights reserved.
     </div>
   </footer>
-
-  <script>
-    // Ensure calendar iframe loads properly
-    window.addEventListener('load', function() {
-      const iframe = document.getElementById('booking-calendar');
-      if (iframe) {
-        // Set minimum height
-        iframe.style.minHeight = '800px';
-        
-        // Listen for messages from iframe to adjust height
-        window.addEventListener('message', function(e) {
-          if (e.data && e.data.height) {
-            iframe.style.height = e.data.height + 'px';
-          }
-        });
-      }
-    });
-  </script>
 </body>
 </html>
